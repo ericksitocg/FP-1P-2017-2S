@@ -49,3 +49,15 @@ print("""
 
 for i in range(len(L_tareas_dia)):
     print("%d. %s"%(i+1,L_tareas_dia[i]))
+#Tema 4
+print("Tema 4")
+f = ['a', 'c', 'z', 'm', 'k']
+g = [3,4,5,6,5,7]
+t = ''
+
+for c in f:
+    a = f.index(c)
+    b = g[:a]
+    t = t + (c * len(b))
+    print(t)
+
