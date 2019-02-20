@@ -50,7 +50,7 @@ print("""
 for i in range(len(L_tareas_dia)):
     print("%d. %s"%(i+1,L_tareas_dia[i]))
 #Tema 4
-print("Tema 4")
+print("Tema 4.1")
 f = ['a', 'c', 'z', 'm', 'k']
 g = [3,4,5,6,5,7]
 t = ''
@@ -60,4 +60,6 @@ for c in f:
     b = g[:a]
     t = t + (c * len(b))
     print(t)
-
+print("Tema 4.2")
+vector = np.array([1, 5, 6, 6, 5, 2, 1, 3, 7, 9, 0, 0, 1, 4, 8])
+print(np.unique(vector[vector % 2 == 0]).size)
