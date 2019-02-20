@@ -49,6 +49,41 @@ print("""
 
 for i in range(len(L_tareas_dia)):
     print("%d. %s"%(i+1,L_tareas_dia[i]))
+
+
+#Tema 2
+
+"""
+El resultado del examen se lo entregan como una cadena de texto. Los indicadores los puede
+identificar porque estos siempre estarán en mayúsculas, por ejemplo INR, WBC, RBC, TA, etc. Todo
+indicador va seguido de un espacio, luego un número con decimales, seguido de otro espacio en blanco y
+finalmente las unidades. Al final del resultado se encuentra el nombre del médico. 
+
+La cantidad de indicadores puede variar. Los puntos no solo aparecen en los decimales, sino también
+para separar párrafos o en otras ocasiones como las direcciones de e-mail
+
+Escriba un programa que nos muestre la información desglosada, el nombre del médico y una
+recomendación de si el paciente debe ir al endocrinólogo. Un paciente debe ir al endocrinólogo si su nivel
+de azúcar (BGT), está por encima de los 150 mmol/dL. En caso de dar la recomendación, mostrar doble
+asterisco en el indicador BGT y la recomendación al final. 
+
+INFORME DE LABORATORIO
+**********************
+INR 1.25 segundos
+BGT 180.12 mmol/dL **
+HGB 13 g/dL
+ESR 3.2 mm/hora
+RBC 4000024.2 cel/uL
+TA 1.5 ng/dL
+WBC 123233.23 cel/uL
+Médico: Juan Pozo
+**Su nivel de azúcar es alto, se recomienda ir al endocrinólogo.
+"""
+
+print("Tema 2")
+resultado = "Resultado de Laboratorio ‘Su Salud’ Nombre del paciente: Jose Aimas E-mail del paciente: jose.aimas@gmail.com Resultados del laboratorio: INR 1.25 segundos BGT 180.12 mmol/dL HGB 13 g/dL ESR 3.2 mm/hora RBC 4000024.2 cel/uL TA 1.5 ng/dL WBC 123233.23 cel/uL. Los valores de este informe no representan un diagnóstico. Firma médico responsable Dr. Juan Pozo"
+
+
 #Tema 4
 print("Tema 4.1")
 f = ['a', 'c', 'z', 'm', 'k']
