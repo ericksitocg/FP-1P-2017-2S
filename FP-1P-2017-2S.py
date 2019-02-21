@@ -83,6 +83,42 @@ Médico: Juan Pozo
 print("Tema 2")
 resultado = "Resultado de Laboratorio ‘Su Salud’ Nombre del paciente: Jose Aimas E-mail del paciente: jose.aimas@gmail.com Resultados del laboratorio: INR 1.25 segundos BGT 180.12 mmol/dL HGB 13 g/dL ESR 3.2 mm/hora RBC 4000024.2 cel/uL TA 1.5 ng/dL WBC 123233.23 cel/uL. Los valores de este informe no representan un diagnóstico. Firma médico responsable Dr. Juan Pozo"
 
+L_palabras = resultado.split(" ")
+L_indicadores = []
+L_cantidades = []
+L_unidades = []
+azucar_alto = False
+
+for i in range(len(L_palabras)):
+    palabra = L_palabras[i]
+    if palabra.isupper():
+        L_indicadores.append(palabra)
+
+        cantidad = L_palabras[i +1]
+        unidades = L_palabras[i + 2]
+
+        if palabra == "BGT":
+            if float(cantidad) > 150:
+                unidades += " **"
+                azucar_alto = True
+
+        L_cantidades.append(cantidad)
+        L_unidades.append(unidades)
+    elif palabra.lower() == "dr." or palabra.lower() == "dra.":
+        L_datos_doctor = L_palabras[i + 1:]
+        nombre_doctor = " ".join(L_datos_doctor)
+
+print("""
+INFORME DE LABORATORIO
+**********************
+""")
+
+for i in range(len(L_indicadores)):
+    print("%s%12.2f\t%s"%(L_indicadores[i],float(L_cantidades[i]),L_unidades[i]))
+print()
+print("Medico: %s"%nombre_doctor)
+if azucar_alto:
+    print("**Su nivel de azúcar es alto, se recomienda ir al endocrinólogo.")
 
 #Tema 4
 print("Tema 4.1")
