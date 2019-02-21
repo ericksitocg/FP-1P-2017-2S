@@ -120,6 +120,17 @@ print("Medico: %s"%nombre_doctor)
 if azucar_alto:
     print("**Su nivel de azúcar es alto, se recomienda ir al endocrinólogo.")
 
+#Tema 3
+print("Tema 3")
+
+L_datos = [[239034,678493,896321,32438,554213],[4568321,6745634,9754008,3242342,3456123],[234773,56743,123678,4783,90874],[45672,45212,90781,3904,90431]]
+M = np.array(L_datos)
+
+tipoGasolina = np.array(['Regular', 'Extra', 'Súper', 'Premium'])
+gasolineras = np.array(['Primax Alborada', 'PS Los Ríos', 'Mobil Cumbayá', 'Lutexsa CIA Ltda','PS Remigio Crespo'])
+distrito = np.array(['distrito1', 'distrito2', 'distrito1','distrito2','distrito4'])
+ciudades = np.array(['Guayaquil', 'Babahoyo' , 'Quito' , 'Guayaquil', 'Cuenca'])
+
 #Tema 4
 print("Tema 4.1")
 f = ['a', 'c', 'z', 'm', 'k']
