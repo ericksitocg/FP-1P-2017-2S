@@ -114,7 +114,7 @@ INFORME DE LABORATORIO
 """)
 
 for i in range(len(L_indicadores)):
-    print("%s%12.2f\t%s"%(L_indicadores[i],float(L_cantidades[i]),L_unidades[i]))
+    print("%s%15.3f\t\t%s"%(L_indicadores[i],float(L_cantidades[i]),L_unidades[i]))
 print()
 print("Medico: %s"%nombre_doctor)
 if azucar_alto:
