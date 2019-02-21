@@ -131,6 +131,7 @@ gasolineras = np.array(['Primax Alborada', 'PS Los Ríos', 'Mobil Cumbayá', 'Lu
 distrito = np.array(['distrito1', 'distrito2', 'distrito1','distrito2','distrito4'])
 ciudades = np.array(['Guayaquil', 'Babahoyo' , 'Quito' , 'Guayaquil', 'Cuenca'])
 
+#PEndiente
 #Tema 4
 print("Tema 4.1")
 f = ['a', 'c', 'z', 'm', 'k']
