@@ -121,17 +121,29 @@ if azucar_alto:
     print("**Su nivel de azúcar es alto, se recomienda ir al endocrinólogo.")
 
 #Tema 3
-print("Tema 3")
+print("Tema 3\n")
 
 L_datos = [[239034,678493,896321,32438,554213],[4568321,6745634,9754008,3242342,3456123],[234773,56743,123678,4783,90874],[45672,45212,90781,3904,90431]]
 M = np.array(L_datos)
 
-tipoGasolina = np.array(['Regular', 'Extra', 'Súper', 'Premium'])
-gasolineras = np.array(['Primax Alborada', 'PS Los Ríos', 'Mobil Cumbayá', 'Lutexsa CIA Ltda','PS Remigio Crespo'])
+tipoGasolina = np.array(["Regular", "Extra", "Super", "Premium"])
+gasolineras = np.array(['Primax Alborada', 'PS Los Ríos', 'Mobil Cumbaya', 'Lutexsa CIA Ltda','PS Remigio Crespo'])
 distrito = np.array(['distrito1', 'distrito2', 'distrito1','distrito2','distrito4'])
 ciudades = np.array(['Guayaquil', 'Babahoyo' , 'Quito' , 'Guayaquil', 'Cuenca'])
 
-#PEndiente
+#1. Pida un tipo de gasolina por teclado y muestre por pantalla los nombres de todas
+#las gasolineras que han vendido en el año más del promedio de venta en galones para ese tipo.
+
+gasolina = input("Ingrese un tipo de gasolina: ").capitalize()
+#corregir No usar tolist
+A_bol = tipoGasolina.tolist().index(gasolina)
+A_ventas_gasolina = M[A_bol,:]
+promedio_gasolina = A_ventas_gasolina.mean()
+
+A_nombres =gasolineras[A_ventas_gasolina > promedio_gasolina]
+
+print(A_nombres)
+
 #Tema 4
 print("Tema 4.1")
 f = ['a', 'c', 'z', 'm', 'k']
