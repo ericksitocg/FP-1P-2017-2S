@@ -135,7 +135,7 @@ ciudades = np.array(['Guayaquil', 'Babahoyo' , 'Quito' , 'Guayaquil', 'Cuenca'])
 #las gasolineras que han vendido en el año más del promedio de venta en galones para ese tipo.
 
 gasolina = input("Ingrese un tipo de gasolina: ").capitalize()
-#corregir No usar tolist
+#CORREGIR No usar tolist
 A_bol = tipoGasolina.tolist().index(gasolina)
 A_ventas_gasolina = M[A_bol,:]
 promedio_gasolina = A_ventas_gasolina.mean()
@@ -155,6 +155,10 @@ print(A_ventas_ciudad)
 numero_gasolineras_condicion = A_ventas_ciudad[A_ventas_ciudad > 15000000].size
 
 print("Existen %d gasolineras con más de 15 millones de galones en total en el año en la ciudad de %s"%(numero_gasolineras_condicion,ciudad))
+
+#3. [20 puntos] Muestre por pantalla el nombre de la ciudad que más galones ha vendido en el año
+#de gasolina tipo Diesel en el distrito distrito1.
+
 #Tema 4
 print("Tema 4.1")
 f = ['a', 'c', 'z', 'm', 'k']
