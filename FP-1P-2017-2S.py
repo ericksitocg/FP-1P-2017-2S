@@ -144,6 +144,17 @@ A_nombres =gasolineras[A_ventas_gasolina > promedio_gasolina]
 
 print(A_nombres)
 
+#[13 puntos] Pida una ciudad por teclado y calcule cuántas de sus gasolineras han vendido más de
+#15 millones de galones en total en el año, considerando todas las ventas de todos los tipos de
+#gasolinas.
+
+ciudad = input("Ingrese una ciudad: ").capitalize()
+A_indices_ciudad = ciudades == ciudad
+A_ventas_ciudad = M[:,A_indices_ciudad].sum(axis=0)
+print(A_ventas_ciudad)
+numero_gasolineras_condicion = A_ventas_ciudad[A_ventas_ciudad > 15000000].size
+
+print("Existen %d gasolineras con más de 15 millones de galones en total en el año en la ciudad de %s"%(numero_gasolineras_condicion,ciudad))
 #Tema 4
 print("Tema 4.1")
 f = ['a', 'c', 'z', 'm', 'k']
