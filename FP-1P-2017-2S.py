@@ -159,6 +159,19 @@ print("Existen %d gasolineras con más de 15 millones de galones en total en el 
 #3. [20 puntos] Muestre por pantalla el nombre de la ciudad que más galones ha vendido en el año
 #de gasolina tipo Diesel en el distrito distrito1.
 
+ind_diesel = tipoGasolina.tolist().index("Premium")
+bol_diesel = tipoGasolina == "Premium"
+bol_distrito1 = distrito == "distrito1"
+
+A_gasolina_diesel = M[ind_diesel,:]
+
+print(A_gasolina_diesel)
+
+A_separado = M[bol_diesel,bol_distrito1]
+print(A_separado)
+
+ciudad_tema = ciudades[A_gasolina_diesel == A_separado.max()]
+print(ciudad_tema)
 #Tema 4
 print("Tema 4.1")
 f = ['a', 'c', 'z', 'm', 'k']
