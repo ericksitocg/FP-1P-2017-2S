@@ -159,6 +159,8 @@ print("Existen %d gasolineras con más de 15 millones de galones en total en el 
 #3. [20 puntos] Muestre por pantalla el nombre de la ciudad que más galones ha vendido en el año
 #de gasolina tipo Diesel en el distrito distrito1.
 
+#Indexacion booleana solo para arreglos de 1 dimension a menos que sea doble indexacion tanto en filas como en columans
+
 ind_diesel = tipoGasolina.tolist().index("Premium")
 
 bol_diesel = tipoGasolina == "Premium"
