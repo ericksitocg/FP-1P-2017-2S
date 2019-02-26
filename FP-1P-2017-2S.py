@@ -160,14 +160,13 @@ print("Existen %d gasolineras con más de 15 millones de galones en total en el 
 #de gasolina tipo Diesel en el distrito distrito1.
 
 ind_diesel = tipoGasolina.tolist().index("Premium")
+
 bol_diesel = tipoGasolina == "Premium"
 bol_distrito1 = distrito == "distrito1"
 
 A_gasolina_diesel = M[ind_diesel,:]
 
-print(A_gasolina_diesel)
-
-A_separado = M[bol_diesel,bol_distrito1]
+A_separado = M[bol_diesel,bol_distrito1]#doble indexacion booleana si
 print(A_separado)
 
 ciudad_tema = ciudades[A_gasolina_diesel == A_separado.max()]
